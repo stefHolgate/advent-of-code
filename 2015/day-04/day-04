@@ -1,0 +1,19 @@
+from hashlib import md5
+from itertools import count
+input = 'iwrupvqb'
+
+
+def solution_one(s):
+    for i in count(1):
+        t = s + str(i)
+        if md5(t.encode('utf-8')).hexdigest()[:6] == '000000':
+            print(i)
+            break
+
+
+def solution_two(s):
+    pass
+
+
+solution_one(input)
+solution_two(input)
